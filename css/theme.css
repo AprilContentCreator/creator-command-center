@@ -1,0 +1,84 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Core Colors */
+  --bg-deep: #0a0612;
+  --bg-card: #161124;
+  --bg-card-hover: #1e1731;
+  --bg-modal: rgba(10, 6, 18, 0.85);
+  
+  /* Brand Accents */
+  --accent-pink: #f42e78;
+  --accent-cyan: #67e8f9;
+  
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  
+  /* Borders and Effects */
+  --color-border-subtle: rgba(255, 255, 255, 0.05); /* Separated color variable */
+  --glow-pink: 0 0 20px rgba(244, 46, 120, 0.2);
+  --border-subtle: 1px solid var(--color-border-subtle);
+  --border-accent: 1px solid var(--accent-pink);
+  
+  /* Layout Settings */
+  --sidebar-width: 260px;
+  --border-radius: 8px;
+  --font-main: 'Inter', system-ui, sans-serif;
+  --transition-speed: 0.2s;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { margin: 0 0 10px 0; font-weight: 700; }
+a { color: var(--text-primary); text-decoration: none; }
+button { font-family: var(--font-main); cursor: pointer; }
+textarea, input, select {
+  font-family: var(--font-main);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  border: var(--border-subtle);
+  border-radius: var(--border-radius);
+  padding: 10px;
+}
+textarea:focus, input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-pink);
+}
+
+.empty-state { color: var(--text-muted); font-style: italic; }
+.sample-data { color: var(--accent-cyan); font-size: 0.9em; border-left: 2px solid var(--accent-cyan); padding-left: 8px;}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--accent-pink);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: box-shadow var(--transition-speed);
+}
+.btn-primary:hover { box-shadow: var(--glow-pink); }
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: var(--border-subtle);
+  padding: 10px 16px;
+  border-radius: 4px;
+}
+.btn-secondary:hover:not(:disabled) { border-color: var(--text-primary); color: var(--text-primary); }
+.btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
+.hidden {
+  display: none !important;
+}
