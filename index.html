@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator Command Center</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <div class="app-layout">
+    
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+      <div class="brand-logo">
+        <div class="logo-mark"></div>
+        <div class="logo-text">CREATOR COMMAND</div>
+      </div>
+      <button id="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="desktop-brand">
+        <div class="brand-logo">
+          <div class="logo-mark"></div>
+          <div class="logo-text">CREATOR COMMAND</div>
+        </div>
+      </div>
+      
+      <nav class="primary-nav" id="main-nav">
+        <a href="#dashboard" class="nav-item active" data-target="view-dashboard">Home Dashboard</a>
+        <a href="#calendar" class="nav-item" data-target="view-calendar">Master Calendar</a>
+        
+        <div class="nav-group">
+          <div class="nav-item group-title">TikTok</div>
+          <div class="sub-nav">
+            <a href="#tk-creator" data-target="placeholder-tk-creator">TikTok Creator</a>
+            <a href="#tk-shop" data-target="placeholder-tk-shop">TikTok Shop</a>
+            <a href="#tk-content" data-target="placeholder-tk-content">Content</a>
+            <a href="#tk-live" data-target="placeholder-tk-live">LIVE</a>
+            <a href="#tk-analytics" data-target="placeholder-tk-analytics">Analytics</a>
+            <a href="#tk-appeals" data-target="placeholder-tk-appeals">Account Issues & Appeals</a>
+            <a href="#tk-resources" data-target="placeholder-tk-resources">Resources</a>
+          </div>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-item group-title">Facebook</div>
+          <div class="sub-nav">
+            <a href="#fb-private" data-target="placeholder-fb-private">Private Facebook</a>
+            <a href="#fb-unniched" data-target="placeholder-fb-unniched">April Un'Niched</a>
+          </div>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-item group-title">Instagram</div>
+          <div class="sub-nav">
+            <a href="#ig-unniched" data-target="placeholder-ig-unniched">April Un'Niched</a>
+            <a href="#ig-unnamed" data-target="placeholder-ig-unnamed">Unnamed — Formerly Dark Garden Collection</a>
+          </div>
+        </div>
+
+        <a href="#printify" class="nav-item" data-target="placeholder-printify">Printify</a>
+        <a href="#shopify" class="nav-item" data-target="placeholder-shopify">Shopify</a>
+        
+        <div class="nav-divider"></div>
+        
+        <a href="#cln" class="nav-item" data-target="placeholder-cln">Creator Lounge Network</a>
+        <a href="#dv" class="nav-item" data-target="placeholder-dv">Let's Talk About DV</a>
+        
+        <div class="nav-divider"></div>
+
+        <a href="#friends" class="nav-item" data-target="placeholder-friends">Friends' Pages</a>
+        <a href="#live-help" class="nav-item" data-target="placeholder-live-help">LIVE Help Requests</a>
+        <a href="#brain-dump" class="nav-item" data-target="view-brain-dump">Brain Dump</a>
+        <a href="#resources" class="nav-item" data-target="placeholder-resources">Resources & Links</a>
+        <a href="#sandbox" class="nav-item" data-target="placeholder-sandbox">"I'll Just Put This Here"</a>
+        <a href="#settings" class="nav-item" data-target="view-settings">Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-area">
+      <!-- Global Header -->
+      <header class="top-bar">
+        <div class="global-search-placeholder">
+           <input type="text" placeholder="Global Search (Coming Later)..." disabled>
+        </div>
+        <button class="btn-primary" id="quick-add-btn">+ Quick Add</button>
+      </header>
+
+      <!-- VIEW: Home Dashboard -->
+      <div id="view-dashboard" class="view-section active">
+        <h1>Dashboard</h1>
+        <div class="dashboard-grid">
+          <div class="card"><h3>Today</h3><p class="sample-data">Sample: Record 2 videos</p></div>
+          <div class="card"><h3>Upcoming</h3><p class="sample-data">Sample: Thursday LIVE at 8PM</p></div>
+          <div class="card"><h3>Overdue</h3><p class="empty-state">No overdue tasks.</p></div>
+          <div class="card"><h3>Current Priority</h3><p class="sample-data">Sample: Finish script</p></div>
+          <div class="card"><h3>Recently Added</h3><p class="empty-state">Nothing recent.</p></div>
+          <div class="card"><h3>Waiting On</h3><p class="sample-data">Sample: Shop approval</p></div>
+          <div class="card">
+            <h3>Quick Notes</h3>
+            <textarea id="quick-note-input" placeholder="Type a fast note... (Saves automatically)"></textarea>
+          </div>
+          <div class="card"><h3>Upcoming LIVE</h3><p class="sample-data">Sample: Co-host scheduled</p></div>
+        </div>
+      </div>
+
+      <!-- VIEW: Master Calendar -->
+      <div id="view-calendar" class="view-section">
+        <h1>Master Calendar</h1>
+        <p class="view-description">Visual sample month. Syncing currently inactive.</p>
+        <div class="calendar-shell">
+          <div class="cal-header">Sun</div><div class="cal-header">Mon</div><div class="cal-header">Tue</div>
+          <div class="cal-header">Wed</div><div class="cal-header">Thu</div><div class="cal-header">Fri</div><div class="cal-header">Sat</div>
+          
+          <!-- 35-Cell Sample Grid -->
+          <!-- Week 1 -->
+          <div class="cal-day"><span class="date-num">29</span></div><div class="cal-day"><span class="date-num">30</span></div><div class="cal-day"><span class="date-num">1</span></div>
+          <div class="cal-day"><span class="date-num">2</span><div class="cal-event sample-data">Sample: Post TikTok</div></div><div class="cal-day"><span class="date-num">3</span></div><div class="cal-day"><span class="date-num">4</span></div><div class="cal-day"><span class="date-num">5</span><div class="cal-event live sample-data">Sample: LIVE 8PM</div></div>
+          <!-- Week 2 -->
+          <div class="cal-day"><span class="date-num">6</span></div><div class="cal-day"><span class="date-num">7</span></div><div class="cal-day"><span class="date-num">8</span></div><div class="cal-day"><span class="date-num">9</span></div><div class="cal-day"><span class="date-num">10</span></div><div class="cal-day"><span class="date-num">11</span></div><div class="cal-day"><span class="date-num">12</span></div>
+          <!-- Week 3 -->
+          <div class="cal-day"><span class="date-num">13</span></div><div class="cal-day"><span class="date-num">14</span></div><div class="cal-day"><span class="date-num">15</span></div><div class="cal-day"><span class="date-num">16</span></div><div class="cal-day"><span class="date-num">17</span></div><div class="cal-day"><span class="date-num">18</span></div><div class="cal-day"><span class="date-num">19</span></div>
+          <!-- Week 4 -->
+          <div class="cal-day"><span class="date-num">20</span></div><div class="cal-day"><span class="date-num">21</span></div><div class="cal-day"><span class="date-num">22</span></div><div class="cal-day"><span class="date-num">23</span></div><div class="cal-day"><span class="date-num">24</span></div><div class="cal-day"><span class="date-num">25</span></div><div class="cal-day"><span class="date-num">26</span></div>
+          <!-- Week 5 -->
+          <div class="cal-day"><span class="date-num">27</span></div><div class="cal-day"><span class="date-num">28</span></div><div class="cal-day"><span class="date-num">29</span></div><div class="cal-day"><span class="date-num">30</span></div><div class="cal-day"><span class="date-num">31</span></div><div class="cal-day"><span class="date-num">1</span></div><div class="cal-day"><span class="date-num">2</span></div>
+        </div>
+      </div>
+
+      <!-- VIEW: Brain Dump -->
+      <div id="view-brain-dump" class="view-section">
+        <h1>Brain Dump</h1>
+        <p class="view-description">Fast, low-friction idea entry.</p>
+        <div class="brain-dump-form">
+          <textarea id="bd-input" placeholder="What's on your mind?"></textarea>
+          <button id="bd-submit" class="btn-primary">Save Idea</button>
+        </div>
+        <div id="bd-list" class="brain-dump-list">
+          <!-- Dumped items load here -->
+        </div>
+      </div>
+
+      <!-- VIEW: Settings -->
+      <div id="view-settings" class="view-section">
+        <h1>Settings & Data Foundation</h1>
+        <div class="card warning-card">
+          <h3>Storage Information</h3>
+          <p>Data is currently stored in <strong>browser-local storage (LocalStorage)</strong> under the isolated namespace: <code id="user-namespace-display">owner_april</code>. It does not leave your device.</p>
+          <p><em>Warning:</em> Because this is local storage, your data will be permanently lost if you clear your browser cache/data, or if you switch browsers or devices.</p>
+        </div>
+        <br>
+        <button class="btn-secondary" disabled>Export User Data (Coming Later)</button>
+        <button class="btn-secondary" disabled>Import/Restore (Coming Later)</button>
+      </div>
+
+      <!-- PLACEHOLDERS -->
+      <div id="placeholder-tk-creator" class="view-section placeholder-view"><h1>TikTok Creator</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-tk-shop" class="view-section placeholder-view"><h1>TikTok Shop</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-tk-content" class="view-section placeholder-view"><h1>TikTok Content</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-tk-live" class="view-section placeholder-view"><h1>TikTok LIVE</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-tk-analytics" class="view-section placeholder-view"><h1>TikTok Analytics</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-tk-appeals" class="view-section placeholder-view"><h1>TikTok Account Issues & Appeals</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-tk-resources" class="view-section placeholder-view"><h1>TikTok Resources</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-fb-private" class="view-section placeholder-view"><h1>Private Facebook</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-fb-unniched" class="view-section placeholder-view"><h1>Facebook: April Un'Niched</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-ig-unniched" class="view-section placeholder-view"><h1>Instagram: April Un'Niched</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-ig-unnamed" class="view-section placeholder-view"><h1>Instagram: Unnamed — Formerly Dark Garden Collection</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-printify" class="view-section placeholder-view"><h1>Printify</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-shopify" class="view-section placeholder-view"><h1>Shopify</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-cln" class="view-section placeholder-view"><h1>Creator Lounge Network</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-dv" class="view-section placeholder-view"><h1>Let's Talk About DV</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-friends" class="view-section placeholder-view"><h1>Friends' Pages</h1><p class="empty-state">Placeholder only. Will hold frequent creator pages, visit reminders, and check-ins.</p></div>
+      <div id="placeholder-live-help" class="view-section placeholder-view"><h1>LIVE Help Requests</h1><p class="empty-state">Placeholder only. Future support for primary/backup helpers, confirmations, and no-show handling.</p></div>
+      <div id="placeholder-resources" class="view-section placeholder-view"><h1>Resources & Links</h1><p class="empty-state">Module not yet built.</p></div>
+      <div id="placeholder-sandbox" class="view-section placeholder-view"><h1>"I'll Just Put This Here"</h1><p class="empty-state">Placeholder only. Future flexible multi-page area.</p></div>
+    </main>
+
+    <!-- Quick Add Modal -->
+    <div id="quick-add-modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <h2>Quick Add</h2>
+        <select id="qa-type" class="form-input">
+          <option value="task">Task</option>
+          <option value="reminder">Reminder</option>
+          <option value="event">Calendar Event</option>
+          <option value="idea">Content Idea</option>
+          <option value="link">Link</option>
+          <option value="note">Note</option>
+          <option value="live-help">LIVE Help Request</option>
+        </select>
+        <textarea id="qa-content" class="form-input" placeholder="Enter details..."></textarea>
+        
+        <div id="qa-confirmation" class="hidden" style="color: var(--accent-cyan); font-size: 13px; font-weight: bold; padding: 10px 0;">
+          ✓ Item saved to LocalStorage! (Available for future modules)
+        </div>
+
+        <div class="modal-actions">
+          <button id="qa-cancel" class="btn-secondary">Cancel</button>
+          <button id="qa-save" class="btn-primary">Save Item</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
