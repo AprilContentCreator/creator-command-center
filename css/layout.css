@@ -183,3 +183,36 @@
   .cal-day { min-height: auto; padding: 15px; border-bottom: 1px solid var(--color-border-subtle); }
   .cal-day .date-num { align-self: flex-start; font-weight: bold; margin-bottom: 10px; }
 }
+
+/* Planner working views */
+.sidebar { flex-shrink: 0; }
+.content-area { min-width: 0; }
+#save-status { margin: 8px 30px; color: var(--accent-cyan); min-height: 1.3em; }
+.section-toolbar, .item-actions { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:16px 0; }
+.section-items { display:grid; gap:16px; }
+.planner-item { padding:16px 0; border-bottom:1px solid #393044; overflow-wrap:anywhere; }
+.item-title { background:none; border:0; color:var(--text-primary); font-size:18px; padding:0; text-align:left; font-weight:600; }
+.item-meta { color:var(--text-secondary); font-size:14px; }
+.item-notes { white-space:pre-wrap; }
+.planner-item a { color:var(--accent-cyan); text-decoration:underline; }
+.item-actions { margin-bottom:0; }
+.search-results { margin:20px 30px; padding:20px; border:1px solid var(--accent-cyan); border-radius:8px; }
+.planner-dialog { background:var(--bg-card); color:var(--text-primary); border:var(--border-accent); border-radius:12px; width:min(560px,95vw); max-height:90vh; padding:24px; }
+.planner-dialog::backdrop { background:var(--bg-modal); }
+.planner-dialog form, .planner-dialog label { display:flex; flex-direction:column; gap:8px; }
+.planner-dialog form { gap:16px; }
+.form-pair { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.form-pair label { min-width:0; }
+.check-label { flex-direction:row!important; align-items:center; }
+.import-label { display:flex; flex-direction:column; gap:12px; margin-top:24px; max-width:450px; }
+.cal-day { min-width:0; }
+.cal-event { color:var(--text-primary); border:1px solid #393044; text-align:left; overflow-wrap:anywhere; font-size:14px; }
+.date-num { border:0; background:none; cursor:pointer; }
+.other-month { opacity:.5; }
+.is-today { outline:1px solid var(--accent-cyan); outline-offset:-1px; }
+.completed { text-decoration:line-through; opacity:.65; }
+button:focus-visible, a:focus-visible { outline:2px solid var(--accent-cyan); outline-offset:3px; }
+textarea, input, select, button { font-size:1rem; }
+.sub-nav a { font-size:14px; }
+.empty-state { color:var(--text-secondary); }
+@media(max-width:768px) { .view-section { padding:20px; } .dashboard-grid { grid-template-columns:minmax(0,1fr); } .other-month { display:none; } .content-area { height:calc(100dvh - 60px); } .form-pair { grid-template-columns:1fr; } }
