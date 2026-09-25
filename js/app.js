@@ -97,3 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('storage',e=>{if(e.key===key){try{const next=JSON.parse(e.newValue);validate(next);data=next;$('quick-note-input').value=data.quickNote;render();say('Updated from another tab.');}catch{storageHealthy=false;say('Saved data changed unexpectedly. Reload before editing.');}}});
   render();route();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const groups = [...document.querySelectorAll('.nav-group')];
+  function expand(selected) { groups.forEach(group => { const open = group === selected; group.classList.toggle('expanded',open); group.querySelector('.group-title').setAttribute('aria-expanded',String(open)); }); }
+  groups.forEach(group => { const old=group.querySelector('.group-title'); const button=document.createElement('button'); button.className=old.className; button.type='button'; button.textContent=old.textContent; button.setAttribute('aria-expanded','false'); old.replaceWith(button); button.onclick=()=>expand(group.classList.contains('expanded')?null:group); });
+  function syncTabs() { expand(groups.find(group=>group.querySelector('a.active'))); }
+  window.addEventListener('hashchange',syncTabs); syncTabs();
+});
